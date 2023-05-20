@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  node_app:
+    image: apigateway
+    ports:
+      - 3000:3000
+    volumes:
+      - ./:/app
+    networks:
+      - my-network
+networks:
+  my-network:
+    driver: bridge
+    # external: true
